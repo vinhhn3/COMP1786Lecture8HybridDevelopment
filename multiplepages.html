@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Start of first page -->
+    <div data-role="page" id="page1">
+      <div data-role="header">
+        <h1>Page 1</h1>
+      </div>
+      <div role="main" class="ui-content">
+        <p>I'm first in the source order so I'm shown as the page.</p>
+        <p>View internal page called <a href="#page2">Page 2</a></p>
+      </div>
+      <div data-role="footer">
+        <h4>Page 1 Footer</h4>
+      </div>
+    </div>
+    <!-- Start of second page -->
+    <div data-role="page" id="page2">
+      <div data-role="header">
+        <h1>Page 2</h1>
+      </div>
+      <div role="main" class="ui-content">
+        <p>
+          I'm the second in the source order so I'm hidden when the page loads.
+          I'm just shown if a link that references my id is beeing clicked.
+        </p>
+        <p><a href="#page1">Back to Page 1</a></p>
+      </div>
+      <div data-role="footer">
+        <h4>Page 2 Footer</h4>
+      </div>
+    </div>
+  </body>
+</html>
